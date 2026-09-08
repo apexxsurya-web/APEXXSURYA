@@ -21,6 +21,8 @@ export const BRAND = {
   name: 'APEX SURYA',
   handle: '@apexxsurya.web',
   instagramUrl: 'https://www.instagram.com/apexxsurya.web/',
+  youtubeHandle: '@surya-chaurasiya',
+  youtubeUrl: 'https://youtube.com/@surya-chaurasiya?si=D20BPLwOpH0hqwQE',
   phoneDisplay: '+91 7309520485',
   phoneRaw: '917309520485',
   email: 'suryachaurasia99@gmail.com',

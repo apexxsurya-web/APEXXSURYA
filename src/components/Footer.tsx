@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND, getWhatsAppUrl } from '../data';
-import { Instagram, MessageSquare, Mail, ArrowUp } from 'lucide-react';
+import { Instagram, Youtube, MessageSquare, Mail, ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const navLinks = [
@@ -95,18 +95,34 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-4 space-y-6">
             <div>
               <div className="text-xs font-mono uppercase tracking-widest text-white font-semibold mb-3">
-                Social
+                Social Channels
               </div>
-              <a
-                id="footer-instagram-link"
-                href={BRAND.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-neutral-300 hover:text-red-400 transition-colors"
-              >
-                <Instagram className="w-4 h-4 text-red-500" />
-                <span>Instagram — {BRAND.handle}</span>
-              </a>
+              <div className="space-y-2">
+                <div>
+                  <a
+                    id="footer-instagram-link"
+                    href={BRAND.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs text-neutral-300 hover:text-red-400 transition-colors"
+                  >
+                    <Instagram className="w-4 h-4 text-pink-500" />
+                    <span>Instagram — {BRAND.handle}</span>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    id="footer-youtube-link"
+                    href={BRAND.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs text-neutral-300 hover:text-red-400 transition-colors"
+                  >
+                    <Youtube className="w-4 h-4 text-red-500" />
+                    <span>YouTube — {BRAND.youtubeHandle}</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div>
