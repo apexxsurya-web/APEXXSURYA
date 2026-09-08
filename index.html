@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APEX SURYA — Futuristic Web Development Studio</title>
+    <meta name="description" content="Independent freelance web-development studio creating high-end, responsive and business-focused websites that make brands stand out." />
+    <meta property="og:title" content="APEX SURYA — Futuristic Web Development Studio" />
+    <meta property="og:description" content="Independent freelance web-development studio creating high-end, responsive and business-focused websites that make brands stand out." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="%BASE_URL%logo.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- GITHUB_DEV_ONLY_START -->
+    <script>
+      // Immediately normalize GitHub Pages and redirect to /docs/ if raw source is served
+      (function() {
+        if (window.location.hostname.includes('github.io')) {
+          var p = window.location.pathname;
+          // Trailing slash normalization
+          if (!p.endsWith('/') && !p.split('/').pop().includes('.')) {
+            p = p + '/';
+          }
+          // If GitHub Pages is serving from repository root, forward to /docs/ where compiled site lives
+          if (!p.includes('/docs')) {
+            window.location.replace(window.location.protocol + '//' + window.location.host + p + 'docs/' + window.location.search + window.location.hash);
+            return;
+          }
+        }
+      })();
+    </script>
+    <!-- GITHUB_DEV_ONLY_END -->
+
+    <script>
+      // Capture script/asset loading errors
+      window.addEventListener('error', function(e) {
+        var el = document.getElementById('loading-diag');
+        if (el) {
+          el.style.display = 'block';
+          var text = document.getElementById('loading-diag-text');
+          if (text) {
+            var target = e.target;
+            if (target && target.src) {
+              text.textContent = 'Asset not found (404): ' + target.src;
+            } else if (e.message) {
+              text.textContent = e.message;
+            }
+          }
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-[#070709] text-[#f4f4f7] font-['Plus_Jakarta_Sans',sans-serif] selection:bg-red-600/30 selection:text-white antialiased overflow-x-hidden" style="background-color: #070709; color: #f4f4f7;">
+    <div id="root">
+      <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #070709; color: #f4f4f7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 24px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; max-width: 440px;">
+          <div style="width: 32px; height: 32px; border: 2px solid rgba(239, 68, 68, 0.2); border-top-color: #ef4444; border-radius: 50%; animation: initial-spin 0.8s linear infinite;"></div>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #71717a;">APEX SURYA</span>
+
+          <div id="loading-diag" style="display:none; margin-top: 18px; padding: 18px; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: 12px; font-size: 13px; line-height: 1.6; color: #d4d4d8;">
+            <p id="loading-diag-text" style="color: #f87171; font-weight: 600; font-family: monospace; font-size: 12px; margin-bottom: 10px; word-break: break-all;"></p>
+            <p style="margin-bottom: 12px; color: #a1a1aa; font-size: 12px;">
+              If hosting on GitHub Pages, make sure your GitHub repository settings are set to deploy via <strong>GitHub Actions</strong> (or the <strong>gh-pages</strong> branch), so the compiled static site is served instead of raw source code.
+            </p>
+            <button onclick="location.reload()" style="padding: 7px 16px; background: #dc2626; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;">
+              Reload Page
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Watchdog: If the main app hasn't mounted in 4 seconds, show diagnostic helper
+      setTimeout(function() {
+        if (!document.getElementById('main-content')) {
+          var diag = document.getElementById('loading-diag');
+          if (diag) {
+            diag.style.display = 'block';
+            var text = document.getElementById('loading-diag-text');
+            if (text && !text.textContent) {
+              text.textContent = 'App bundle took longer than expected to load.';
+            }
+          }
+        }
+      }, 4000);
+    </script>
+    <style>
+      @keyframes initial-spin { to { transform: rotate(360deg); } }
+    </style>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

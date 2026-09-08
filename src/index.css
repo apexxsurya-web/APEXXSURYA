@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Futuristic background grid & dots */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(239, 68, 68, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(18, 18, 24, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(26, 26, 35, 0.8);
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.15);
+}
+
+/* Subtle red aura & glow */
+.red-glow-ambient {
+  box-shadow: 0 0 60px -15px rgba(220, 38, 38, 0.25);
+}
+
+.red-glow-subtle {
+  box-shadow: 0 0 35px -10px rgba(239, 68, 68, 0.3);
+}
+
+.red-text-glow {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #23232c;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
